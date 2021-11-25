@@ -41,14 +41,14 @@ if (parseInt(cantidadReloj) > prod1.stock){
     alert("No hay stock suficiente para la cantidad ingresada. El stock actual es de: " + prod1.stock);
 } else {
     prod1.cantCarrito = parseInt(cantidadReloj);
-    carrito.listaProductos.push(prod1);
+    carrito.añadirCarrito(prod1);
 }
 
 if (parseInt(cantidadPulsera) > prod2.stock){
     alert("No hay stock suficiente para la cantidad ingresada. El stock actual es de: " + prod2.stock);
 } else {
     prod2.cantCarrito = parseInt(cantidadPulsera);
-    carrito.listaProductos.push(prod2);
+    carrito.añadirCarrito(prod2);
 }
 
 // Calculo el total de la compra sin descuentos

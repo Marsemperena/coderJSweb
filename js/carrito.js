@@ -23,6 +23,17 @@ class Carrito {
         return total
     }
 
+    añadirCarrito(producto){
+        this.listaProductos.push(producto);
+        console.log("El producto fue añadido al carrito");
+    }
+
+    removerCarrito(producto){
+        let prodIndex = this.listaProductos.indexOf(producto);
+        this.listaProductos.splice(prodIndex, 1);
+        console.log("El producto fue removido del carrito");
+    }
+
     mostrarSinStock(){
         if (this.listaProductos.length > 0){
             let sinStock = this.listaProductos.filter(prod => prod.stock === 0);
