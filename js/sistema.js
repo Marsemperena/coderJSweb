@@ -24,7 +24,9 @@ function ordenarProductos(lista, criterio){
 const prod1 = new Producto(1, "Reloj", 125.50, 10, "");
 const prod2 = new Producto(2, "Pulsera de Oro", 364.00, 1, "");
 
-const carrito = new Carrito(1);
+const usuario = new Usuario(1, "Marisol", "Semperena", "calle 123", "tarjeta");
+
+const carrito = new Carrito(1, 1);
 carrito.saludoInicial();
 
 // El sistema arroja alerta inical cuando algun producto esta SIN STOCK
@@ -62,3 +64,6 @@ totalCompra = carrito.calcularDescuento(codigo, totalCompra);
 // Corroboro en cuantas cuotas se desea abonar
 let cantidadCuotas = prompt("Indique en cuantas cuotas quiere abonar:");
 carrito.calcularCuota(cantidadCuotas, totalCompra);
+
+usuario.comprarCarrito();
+
